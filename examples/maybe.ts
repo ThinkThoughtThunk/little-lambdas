@@ -1,4 +1,4 @@
-import SumType from 'sums-up';
+// import SumType from 'sums-up';
 
 class Maybe<T> extends SumType<{ Just: [T]; Nothing: [] }> {}
 
