@@ -1,10 +1,14 @@
-const <Match[] extends Variant[]>TaggedUnion = {
+const <Match[] extends Variant[]>Union = {
   get type(): keyof M {
       return this.variantName;
   }
 }
 
-abstract class TaggedUnion<M extends Variants> implements Readable, Printable {
+export const Union = {
+
+}
+
+abstract class Union<M extends Variants> implements Readable, Printable {
   private variantName: keyof M
   private data: unknown[]
 
@@ -24,7 +28,7 @@ abstract class TaggedUnion<M extends Variants> implements Readable, Printable {
       throw new Error('caseOf pattern is missing a function for ${this.variantName}')
   }
 
-  public equals(that: TaggedUnion<M>): boolean {
+  public equals(that: Union<M>): boolean {
       return variantName === that.variantName && arrayEquals(this.data, that.data);
   }
 
