@@ -14,15 +14,15 @@ type Arrow<Source, Target, Result> = (s: Source, t: Target) => Result
 
 // type Arrows<P> = Arrow<P>[]
 
-type Compose<A extends Obj, B extends Obj, C extends Obj> =
-  Compose<Arrow<A, B>, Arrow<B, C>> extends Arrow<A, C> ? Arrow<A, C> : never
+// type Compose<A extends Obj, B extends Obj, C extends Obj> =
+//   Compose<Arrow<A, B>, Arrow<B, C>> extends Arrow<A, C> ? Arrow<A, C> : never
 
-abstract class Category<A, B, C, Source extends Objs<A>, Target extends Objs<B>> {
-  abstract objects: Set<Obj>
-  abstract arrows: Set<Arrow<Source, Target>>
-  abstract compose: Compose<A, B, C>
+// abstract class Category<A, B, C, Source extends Objs<A>, Target extends Objs<B>> {
+//   abstract objects: Set<Obj>
+//   abstract arrows: Set<Arrow<Source, Target>>
+//   abstract compose: Compose<A, B, C>
 
-}
+// }
 
 // abstract class Category<Object, Arrow extends > {
 //   objects: Set<Object>

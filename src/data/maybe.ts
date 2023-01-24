@@ -3,7 +3,7 @@ import { Monad } from "./Types/Monad';
 
 type Garbage = null | undefined | typeof NaN
 
-TODO: two params
+// TODO: two params
 const id = <T>(t: T) => t
 
 const exists = <T extends unknown | Garbage>(t: T): t is T =>
