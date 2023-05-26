@@ -1,3 +1,8 @@
+# Todo
+
+[ ] Opaque / Tagged Data Type
+[ ] A
+
 # TSDX User Guide
 
 Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
@@ -72,11 +77,11 @@ Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx
 
 ```js
 // ./types/index.d.ts
-declare var __DEV__: boolean;
+declare var __DEV__: boolean
 
 // inside your code...
 if (__DEV__) {
-  console.log('foo');
+  console.log('foo')
 }
 ```
 

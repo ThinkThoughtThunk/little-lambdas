@@ -1,39 +1,39 @@
-const <Match[] extends Variant[]>Union = {
-  get type(): keyof M {
-      return this.variantName;
-  }
-}
+// const <Match[] extends Variant[]>Union = {
+//   get type(): keyof M {
+//       return this.variantName;
+//   }
+// }
 
-export const Union = {
+// export const Union = {
 
-}
+// }
 
-abstract class Union<M extends Variants> implements Readable, Printable {
-  private variantName: keyof M
-  private data: unknown[]
+// abstract class Union<M extends Variants> implements Readable, Printable {
+//   private variantName: keyof M
+//   private data: unknown[]
 
-  constructor(...args: VariantNameAndData<M>) {
-      let [variantName, ...data = args]
-      this.variantName = variantName;
-      this.data = data;
-  }
+//   constructor(...args: VariantNameAndData<M>) {
+//       let [variantName, ...data = args]
+//       this.variantName = variantName;
+//       this.data = data;
+//   }
 
-  public caseOf<T>(pattern: CasePattern<M, T>): T {
-      if (this.variantName in pattern) {
-          return (pattern[this.variantName] as any)(...this.data);
-      }
+//   public caseOf<T>(pattern: CasePattern<M, T>): T {
+//       if (this.variantName in pattern) {
+//           return (pattern[this.variantName] as any)(...this.data);
+//       }
 
-      if (pattern._) return pattern._();
+//       if (pattern._) return pattern._();
 
-      throw new Error('caseOf pattern is missing a function for ${this.variantName}')
-  }
+//       throw new Error('caseOf pattern is missing a function for ${this.variantName}')
+//   }
 
-  public equals(that: Union<M>): boolean {
-      return variantName === that.variantName && arrayEquals(this.data, that.data);
-  }
+//   public equals(that: Union<M>): boolean {
+//       return variantName === that.variantName && arrayEquals(this.data, that.data);
+//   }
 
-  public toString(): string {
-      if (this.data.length) return `${this.variantName}` ${ JSON.stringify(this.data, null, 2) }`;
-      return ${this.variantName}
-  }
+//   public toString(): string {
+//       if (this.data.length) return `${this.variantName}` ${ JSON.stringify(this.data, null, 2) }`;
+//       return ${this.variantName}
+//   }
   

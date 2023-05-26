@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "github.copilot",
+    "styled-components.vscode-styled-components",
+    "dakara.transformer",
+    "gruntfuggly.todo-tree",
+    "naumovs.theme-oceanicnext",
+    "hbenl.vscode-test-explorer",
+    "eamodio.gitlens",
+    "formulahendry.auto-rename-tag"
+  ]
+}
