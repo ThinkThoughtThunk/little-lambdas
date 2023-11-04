@@ -19,5 +19,5 @@ const maybeAdd1 = new Maybe(deepObject.lookup?.forA?.number).caseOf({
 
 ## Todo
 
-- [x] Opaque / Tagged Data Type: DataType.ts
+- [x] Opaque / Tagged Data Type: `DataType.ts`
 - [ ] All boxed types (Maybe, Result, Task, etc.)
